@@ -9,7 +9,7 @@ sudo apt-get -qqy upgrade
 sudo apt-get -qqy install git
 
 if [ -d ~/.config/dod/config ]; then
-  git pull -q
+  git pull -q ~/.config/dod/config
 else
   git clone -q https://github.com/debianordie/config.git ~/.config/dod/config
 fi
