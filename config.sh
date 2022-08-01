@@ -37,3 +37,6 @@ export QT_QPA_PLATFORM=wayland
 if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
   exec sway
 fi' > ~/.bash_aliases
+
+mkdir -p ~/.config/sway
+curl --silent https://raw.githubusercontent.com/debianordie/testing/main/sway.conf > ~/.config/sway/config
