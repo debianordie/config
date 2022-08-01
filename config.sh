@@ -1,5 +1,9 @@
 #!/bin/sh
 
+# info
+# https://cdimage.debian.org/debian-cd/current-live/amd64/iso-hybrid/
+# https://blog.aktsbot.in/swaywm-on-debian-11.html
+
 export DEBIAN_FRONTEND=noninteractive
 
 alias package='sudo apt-get --quiet --quiet --yes'
