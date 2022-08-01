@@ -41,6 +41,6 @@ if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
 fi' > ~/.bash_aliases
 
 mkdir -p ~/.config/sway
-cp -a $BASEDIR/sway.conf ~/.config/sway/config
+cp -a ${BASEDIR}/sway.conf ~/.config/sway/config
 
-cat $BASEDIR/README.md
+cat ${BASEDIR}/README.md
