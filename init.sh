@@ -1,9 +1,8 @@
 #!/bin/sh
 set -Eex
 
-alias package='DEBIAN_FRONTEND=noninteractive sudo apt-get --quiet --quiet --yes'
-package update
-package install git
+DEBIAN_FRONTEND=noninteractive sudo apt-get -qqy update
+DEBIAN_FRONTEND=noninteractive sudo apt-get -qqy install git
 
 cd $(mktemp --directory)
 git clone -q https://github.com/debianordie/config.git .
