@@ -3,6 +3,7 @@ set -Ee
 
 export DEBIAN_FRONTEND=noninteractive
 sudo apt-get -qqy update
+sudo apt-get -qqy upgrade
 sudo apt-get -qqy install git
 
 cd $(mktemp --directory)
