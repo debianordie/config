@@ -15,7 +15,7 @@ echo 'for FILE in $(ls -1 ~/.config/dod); do
   . ~/.config/dod/$FILE
 done' > ~/.dod
 
-if [ ! -z CONFIG ]; then
+if [ ! -z "${CONFIG}" ]; then
   cd $(mktemp --directory)
   git clone -q https://github.com/debianordie/${CONFIG}.git .
   sh ./config.sh
