@@ -10,16 +10,12 @@ sudo apt-get -qqy install git
 
 git clone -q https://github.com/debianordie/config.git ~/.config/dod/config
 
-echo 'for REPO in $(ls -1 ~/.config/dod); do
-  if [ -f ~/.config/dod/${REPO}/imports.sh ]; then
-    . ~/.config/dod/$REPO/imports.sh
-  fi
-done' > ~/.dod
+ln -sf ~/.config/dod/config/dod.sh ~/.dod
 
 if [ ! -z "${CONFIG}" ]; then
   cd $(mktemp --directory)
   if curl -sf https://github.com/debianordie/${CONFIG} >/dev/null; then
-    git clone -q https://github.com/debianordie/${CONFIG}.git .
-    sh ./config.sh
+    git clone -q https://github.com/debianordie/${CONFIG}.git ~/.config/dod/${CONFIG}
+    sh ~/.config/dod/${CONFIG}/config.sh
   fi
 fi
