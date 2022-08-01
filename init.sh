@@ -17,7 +17,7 @@ done' > ~/.dod
 
 if [ ! -z "${CONFIG}" ]; then
   cd $(mktemp --directory)
-  if [ "$(curl --silent https://api.github.com/repos/debianordie/sway | jq --raw-output .message)" != "Not Found" ]; then
+  if [ "$(curl --silent https://api.github.com/repos/debianordie/${CONFIG} | jq --raw-output .message)" != "Not Found" ]; then
     git clone -q https://github.com/debianordie/${CONFIG}.git .
     sh ./config.sh
   fi
