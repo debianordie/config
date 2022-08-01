@@ -1,4 +1,5 @@
 #!/bin/sh
+set -Eex
 
 export DEBIAN_FRONTEND=noninteractive
 export BASEDIR=$(dirname "$0")
