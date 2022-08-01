@@ -15,7 +15,6 @@ else
 fi
 
 ln -sf ~/.config/dod/config/dod.sh ~/.dod
-
 . ~/.dod
 
 if [ ! -z "${CONFIG}" ]; then
