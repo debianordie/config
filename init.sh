@@ -4,7 +4,6 @@ sudo apt-get -qqy update
 sudo apt-get -qqy install git
 
 REPO=$(mktemp --directory)
-git clone -q https://github.com/debianordie/testing.git ${REPO}
+git clone -q https://github.com/debianordie/${CONFIG}.git ${REPO}
 
-echo $CONFIG
-#sh ${REPO}/config.sh
+sh ${REPO}/config.sh
