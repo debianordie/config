@@ -1,5 +1,7 @@
 #!/bin/sh
 
+BASEDIR=$(dirname "$0")
+
 export DEBIAN_FRONTEND=noninteractive
 
 alias package='sudo apt-get --quiet --quiet --yes'
@@ -39,4 +41,6 @@ if [ -z $DISPLAY ] && [ "$(tty)" = "/dev/tty1" ]; then
 fi' > ~/.bash_aliases
 
 mkdir -p ~/.config/sway
-curl --silent https://raw.githubusercontent.com/debianordie/testing/main/sway.conf > ~/.config/sway/config
+cp -a $BASEDIR/sway.conf ~/.config/sway/config
+
+cat $BASEDIR/readme.md
