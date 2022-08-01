@@ -18,13 +18,12 @@ ln -sf ~/.config/dod/config/dod.sh ~/.dod
 
 if [ ! -z "${CONFIG}" ]; then
   cd $(mktemp --directory)
-  if [ -d ~/.config/dod/${CONFIG} ]; then
-    git pull -q
-    sh ~/.config/dod/${CONFIG}/config.sh
-else
-    if curl -sf https://github.com/debianordie/${CONFIG} >/dev/null; then
+  if curl -sf https://github.com/debianordie/${CONFIG} >/dev/null; then
+    if [ -d ~/.config/dod/${CONFIG} ]; then
+      git pull -q
+    else
       git clone -q https://github.com/debianordie/${CONFIG}.git ~/.config/dod/${CONFIG}
-      sh ~/.config/dod/${CONFIG}/config.sh
     fi
+    sh ~/.config/dod/${CONFIG}/config.sh
   fi
 fi
