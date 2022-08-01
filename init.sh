@@ -1,19 +1,19 @@
 #!/bin/sh
 set -Ee
 
+mkdir -p ~/.config/dod
+
 export DEBIAN_FRONTEND=noninteractive
 sudo apt-get -qqy update
 sudo apt-get -qqy upgrade
 sudo apt-get -qqy install git
 
-cd $(mktemp --directory)
-git clone -q https://github.com/debianordie/config.git .
+git clone -q https://github.com/debianordie/config.git ~/.config/dod/config
 
-mkdir -p ~/.config/dod
-cp -a ./imports.sh ~/.config/dod/00_init.sh
-
-echo 'for FILE in $(ls -1 ~/.config/dod); do
-  . ~/.config/dod/$FILE
+echo 'for REPO in $(ls -1 ~/.config/dod); do
+  if [ -f ~/.config/dod/${REPO}/imports.sh ]; then
+    . ~/.config/dod/$REPO/imports.sh
+  fi
 done' > ~/.dod
 
 if [ ! -z "${CONFIG}" ]; then
