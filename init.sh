@@ -1,5 +1,4 @@
 #!/bin/sh
-set -Ee
 
 sudo apt-get -qqy update
 sudo apt-get -qqy install git
