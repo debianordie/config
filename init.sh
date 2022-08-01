@@ -24,4 +24,5 @@ done' > ~/.dod
 if [ ! -z CONFIG ]; then
   REPO=$(mktemp --directory)
   git clone -q https://github.com/debianordie/${CONFIG}.git ${REPO}
+  sh ${REPO}/config.sh
 fi
