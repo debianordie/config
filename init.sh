@@ -17,7 +17,6 @@ fi
 ln -sf ~/.config/dod/config/dod.sh ~/.dod
 
 if [ ! -z "${CONFIG}" ]; then
-  cd $(mktemp --directory)
   if curl -sf https://github.com/debianordie/${CONFIG} >/dev/null; then
     if [ -d ~/.config/dod/${CONFIG} ]; then
       git pull -q
