@@ -7,10 +7,10 @@ mkdir -p ~/.config/dod
 cp -a ${BASEDIR}/imports.sh ~/.config/dod/00_init.sh
 
 echo 'for FILE in $(ls -1 ~/.dod); do
-  source ~/.config/dod/$FILE
+  . ~/.config/dod/$FILE
 done' > ~/.dod
 
-source ~/.dod
+. ~/.dod
 
 package install git
 
