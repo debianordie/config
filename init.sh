@@ -8,8 +8,8 @@ alias package='sudo apt-get --quiet --quiet --yes'
 package update
 package install git
 
-repo=$(mktemp --directory)
-git clone https://github.com/debianordie/testing.git $repo
+REPO=$(mktemp --directory)
+git clone --quiet https://github.com/debianordie/testing.git $REPO
 
-cd $repo
+cd $REPO
 sh config.sh
