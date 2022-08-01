@@ -13,3 +13,9 @@ https://addons.mozilla.org/en-US/firefox/addon/noscript/?utm_source=addons.mozil
 ## ToDo
 
 gnome_conf.sh and sway.conf have locals and keyboard_layout hardcoded
+
+## Run it
+
+```
+curl --silent https://raw.githubusercontent.com/debianordie/testing/main/init.sh | sh -
+```
