@@ -43,4 +43,4 @@ fi' > ~/.bash_aliases
 mkdir -p ~/.config/sway
 cp -a $BASEDIR/sway.conf ~/.config/sway/config
 
-cat $BASEDIR/readme.md
+cat $BASEDIR/README.md
