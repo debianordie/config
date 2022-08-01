@@ -24,7 +24,7 @@ done
 
 package update
 package upgrade
-package install sway swaybar
+package install sway
 package install telegram-desktop keepassx zim virt-manager terminator vim git geany-plugin-treebrowser
 package install webext-https-everywhere webext-privacy-badger webext-keepassxc-browser webext-ublock-origin-firefox
 
