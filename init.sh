@@ -2,15 +2,15 @@
 
 BASEDIR=$(dirname "$0")
 
-mkdir -p ~/.dod
+mkdir -p ~/.config/dod
 
-cp -a ${BASEDIR}/imports.sh ~/.dod/00_init.sh
+cp -a ${BASEDIR}/imports.sh ~/.config/dod/00_init.sh
 
 echo 'for FILE in $(ls -1 ~/.dod); do
-  source ~/.dod/$FILE
-done' > ~/.bash_aliases
+  source ~/.config/dod/$FILE
+done' > ~/.dod
 
-source ~/.bash_aliases
+source ~/.dod
 
 package install git
 
