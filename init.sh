@@ -6,7 +6,7 @@ mkdir -p ~/.config/dod
 
 cp -a ${BASEDIR}/imports.sh ~/.config/dod/00_init.sh
 
-echo 'for FILE in $(ls -1 ~/.dod); do
+echo 'for FILE in $(ls -1 ~/.config/dod); do
   . ~/.config/dod/$FILE
 done' > ~/.dod
 
