@@ -10,7 +10,7 @@ alias service='sudo systemctl --quiet'
 ensure_dod_module () {
   if curl -sf "https://github.com/debianordie/${1}" >/dev/null; then
     if [ -d "~/.config/dod/${1}" ]; then
-      git pull -q
+      git -C ~/.config/dod/config pull -q "~/.config/dod/${1}"
     else
       git clone -q https://github.com/debianordie/${1}.git ~/.config/dod/${CONFIG}
     fi
