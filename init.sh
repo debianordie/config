@@ -18,5 +18,5 @@ ln -sf ~/.config/dod/config/dod.sh ~/.dod
 . ~/.dod
 
 if [ ! -z "${CONFIG}" ]; then
-  ensure_dod_module "${CONFIG}"
+  run_dod_module "${CONFIG}"
 fi
